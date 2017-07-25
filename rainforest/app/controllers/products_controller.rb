@@ -5,12 +5,20 @@ def index
 end
 
 def create
-  
-  #accept pramas
-  #save to database
-  #retun to show page of new product
-  #fail to save render form but values
-  #flash message
+  @item = Product.new(name: params[:name], discription: params[:discription], price_in_cents: params[:price_in_cents])
+    if @item.save
+      redirect_to('/')
+      # redirect("/products/#{@item.id}")
+    else
+      0
+    end
+  #
+  # if @item[:id] = Product.find(pramas[:id])
+  #   redirect('/products/pramas[:id]')
+  # else
+  #   # puts 'Input error, please try again.'
+  #   render 'form'
+  # #fail to save render form but values
 end
 
 def new
