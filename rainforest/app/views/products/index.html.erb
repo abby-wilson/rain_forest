@@ -6,7 +6,7 @@
   <li>
     <p> <%= link_to(item.name, product_path(item.id))%> </p>
     <p> <%= item.discription %>  </p>
-    <p> <%= item.price_in_cents %>  </p>
+    <p> <%= number_to_currency(item.price_in_cents/100) %>  </p>
   </li>
   <% end %>
 
