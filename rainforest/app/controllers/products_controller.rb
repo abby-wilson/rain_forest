@@ -5,6 +5,12 @@ def index
 end
 
 def create
+  
+  #accept pramas
+  #save to database
+  #retun to show page of new product
+  #fail to save render form but values
+  #flash message
 end
 
 def new

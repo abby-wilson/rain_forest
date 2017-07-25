@@ -1,0 +1,6 @@
+<%= form_for :products, :url => '/products' do |f| %>
+  Name: <%= f.text_field :name %> <br />
+  Description: <%= f.text_field :discription %> <br />
+  Price (in cents): <%= f.number_field :price_in_cents %> <br />
+  <%= f.submit %>
+  <% end %>
